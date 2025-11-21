@@ -1,6 +1,7 @@
-import { Menu, X } from "lucide-react";
+import { Menu, X, Code2 } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
 
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -14,23 +15,31 @@ export default function Navigation() {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-b from-background/90 via-background/80 to-background/70 backdrop-blur-xl border-b border-primary/10">
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-        <a href="#" className="text-xl font-bold tracking-tight" data-testid="link-logo">
-          Vinayak Deshmuk
-        </a>
+        <motion.a 
+          href="#" 
+          className="text-xl font-bold tracking-tight flex items-center gap-2 bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent"
+          whileHover={{ scale: 1.05 }}
+          data-testid="link-logo"
+        >
+          <Code2 className="h-5 w-5 text-primary" />
+          Vinayak
+        </motion.a>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
           {navItems.map((item) => (
-            <a
+            <motion.a
               key={item.href}
               href={item.href}
-              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm font-medium text-muted-foreground hover:text-primary relative group transition-colors"
+              whileHover={{ y: -2 }}
               data-testid={`link-nav-${item.label.toLowerCase()}`}
             >
               {item.label}
-            </a>
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-primary/50 group-hover:w-full transition-all duration-300"></span>
+            </motion.a>
           ))}
         </div>
 
