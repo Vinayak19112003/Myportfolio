@@ -78,9 +78,13 @@ export default function ContactSection() {
             className="flex items-center justify-center gap-2 text-muted-foreground"
           >
             <Mail className="h-5 w-5 text-primary" />
-            <span className="text-sm md:text-base" data-testid="text-contact-email">
-              your.email@example.com
-            </span>
+            <a 
+              href="mailto:vinayak19112003@gmail.com" 
+              className="text-sm md:text-base hover:text-foreground transition-colors"
+              data-testid="link-contact-email"
+            >
+              vinayak19112003@gmail.com
+            </a>
           </motion.div>
         </motion.div>
       </div>
