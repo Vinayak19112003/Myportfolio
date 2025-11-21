@@ -1,0 +1,9 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "devCommand": "npm run dev",
+  "env": {
+    "SESSION_SECRET": "@SESSION_SECRET"
+  },
+  "regions": ["iad1"]
+}
