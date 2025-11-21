@@ -1,4 +1,4 @@
-import { Menu, X, Code2 } from "lucide-react";
+import { Menu, X, Cpu } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
@@ -7,24 +7,24 @@ export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navItems = [
-    { label: "About", href: "#about" },
-    { label: "Skills", href: "#skills" },
-    { label: "Projects", href: "#projects" },
-    { label: "Philosophy", href: "#philosophy" },
+    { label: "Experiments", href: "#experiments" },
+    { label: "Process", href: "#process" },
+    { label: "Capabilities", href: "#capabilities" },
+    { label: "Vision", href: "#vision" },
     { label: "Contact", href: "#contact" },
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-b from-background/90 via-background/80 to-background/70 backdrop-blur-xl border-b border-primary/10">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-primary/20">
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-        <motion.a 
-          href="#" 
-          className="text-xl font-bold tracking-tight flex items-center gap-2 bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent"
+        <motion.a
+          href="#"
+          className="text-xl font-bold tracking-tight flex items-center gap-2"
           whileHover={{ scale: 1.05 }}
           data-testid="link-logo"
         >
-          <Code2 className="h-5 w-5 text-primary" />
-          Vinayak
+          <Cpu className="h-5 w-5 text-primary" />
+          <span className="bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent font-mono">AI Lab</span>
         </motion.a>
 
         {/* Desktop Navigation */}
@@ -57,13 +57,13 @@ export default function Navigation() {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden border-t border-border bg-background/95 backdrop-blur-md">
+        <div className="md:hidden border-t border-primary/10 bg-background/95 backdrop-blur-md">
           <div className="px-6 py-4 space-y-3">
             {navItems.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
-                className="block text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                className="block text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
                 data-testid={`link-mobile-${item.label.toLowerCase()}`}
               >

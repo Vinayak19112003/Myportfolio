@@ -1,9 +1,9 @@
 import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
-import AboutSection from "@/components/AboutSection";
-import SkillsSection from "@/components/SkillsSection";
-import ProjectsSection from "@/components/ProjectsSection";
-import PhilosophySection from "@/components/PhilosophySection";
+import AIExperimentsSection from "@/components/AIExperimentsSection";
+import ProcessSection from "@/components/ProcessSection";
+import CapabilitiesSection from "@/components/CapabilitiesSection";
+import VisionSection from "@/components/VisionSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
@@ -13,10 +13,10 @@ export default function Home() {
       <Navigation />
       <main>
         <HeroSection />
-        <AboutSection />
-        <SkillsSection />
-        <ProjectsSection />
-        <PhilosophySection />
+        <AIExperimentsSection />
+        <ProcessSection />
+        <CapabilitiesSection />
+        <VisionSection />
         <ContactSection />
       </main>
       <Footer />
