@@ -1,0 +1,8 @@
+server/
+shared/
+.git/
+node_modules/
+.env
+.replit
+drizzle.config.ts
+tsconfig.json
