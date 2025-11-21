@@ -73,10 +73,18 @@ export default function HeroSection() {
 
         <motion.p
           variants={itemVariants}
-          className="text-base md:text-lg leading-relaxed text-muted-foreground max-w-3xl mx-auto mb-12"
+          className="text-base md:text-lg leading-relaxed text-muted-foreground max-w-3xl mx-auto mb-4"
           data-testid="text-hero-description"
         >
           B.E. – Computer Science and Engineering
+        </motion.p>
+
+        <motion.p
+          variants={itemVariants}
+          className="text-sm md:text-base leading-relaxed text-muted-foreground max-w-3xl mx-auto mb-12 space-y-2"
+          data-testid="text-hero-tools"
+        >
+          Tech Stack: Next.js • TypeScript • Firebase • Tailwind CSS • Framer Motion • n8n • Selenium/Playwright • Claude • ChatGPT
         </motion.p>
 
         <motion.div

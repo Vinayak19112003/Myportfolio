@@ -62,7 +62,7 @@ export default function PhilosophySection() {
               custom={1}
               data-testid="text-philosophy-description-1"
             >
-              My goal is to <span className="text-foreground font-semibold">design</span> solutions and use AI to execute them efficiently.
+              My approach: <span className="text-foreground font-semibold">Design first, code second.</span> I focus on understanding the problem deeply, architecting solutions logically, and then using AI to accelerate execution. Every decision is rooted in logic, not just following frameworks.
             </motion.p>
             <motion.p
               variants={textVariants}
@@ -72,7 +72,18 @@ export default function PhilosophySection() {
               custom={2}
               data-testid="text-philosophy-description-2"
             >
-              I work faster than traditional developers because I think <span className="text-foreground font-semibold">structurally</span> and build <span className="text-foreground font-semibold">logically</span>.
+              I'm faster than traditional developers because I: <span className="text-primary font-semibold">(1)</span> Think in systems & data flows, <span className="text-primary font-semibold">(2)</span> Write clear specifications before coding, <span className="text-primary font-semibold">(3)</span> Leverage AI for rapid prototyping & iteration.
+            </motion.p>
+            <motion.p
+              variants={textVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              custom={3}
+              className="text-sm text-muted-foreground italic"
+              data-testid="text-philosophy-description-3"
+            >
+              The future belongs to developers who can orchestrate AI, not those who compete with it.
             </motion.p>
           </div>
         </motion.div>

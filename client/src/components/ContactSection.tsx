@@ -46,10 +46,18 @@ export default function ContactSection() {
 
           <motion.p
             variants={itemVariants}
-            className="text-base md:text-lg text-muted-foreground mb-12 max-w-2xl mx-auto" 
+            className="text-base md:text-lg text-muted-foreground mb-4 max-w-2xl mx-auto" 
             data-testid="text-contact-description"
           >
-            Interested in working together on innovative AI-driven solutions? Reach out through any of these channels.
+            Interested in working together on AI-driven solutions, automation projects, or innovative product builds?
+          </motion.p>
+
+          <motion.p
+            variants={itemVariants}
+            className="text-sm text-muted-foreground mb-12 max-w-2xl mx-auto" 
+            data-testid="text-contact-subtitle"
+          >
+            Let's collaborate on projects ranging from concept design to full implementation. Open to freelance, contract, or full-time opportunities.
           </motion.p>
 
           <motion.div
